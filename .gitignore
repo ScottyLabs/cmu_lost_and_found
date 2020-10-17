@@ -28,3 +28,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# scraper files
+/scraper/token.pickle
+/scraper/credentials.json
