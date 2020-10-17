@@ -6,7 +6,7 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Lost and Found website</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/dogLogo.png" />
       </Head>
 
       <main>
