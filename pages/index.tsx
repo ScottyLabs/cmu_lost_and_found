@@ -5,12 +5,13 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Lost and Found website</title>
-        <link rel="icon" href="/dogLogo.png" />
+        <title>CMU Lost and Found</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">Welcome to the CMU Lost and Found app</h1>
+        <h1 className="title">Welcome to the<br></br>CMU Lost and Found</h1>
+        <img src="/dog-logo.png" alt="CMU Lost and Found Logo"></img>
 
         <p>
           Example page:{" "}
@@ -35,8 +36,19 @@ export default function Home() {
           flex: 1;
           display: flex;
           flex-direction: column;
+          text-align: center;
           justify-content: center;
           align-items: center;
+        }
+
+        h1 {
+          color: #9C2624;
+          font-weight: 500;
+        }
+
+        img {
+          max-width: 60%;
+          height: auto;
         }
       `}</style>
 
