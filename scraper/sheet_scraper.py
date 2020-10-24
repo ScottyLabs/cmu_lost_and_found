@@ -8,11 +8,7 @@ from google.auth.transport.requests import Request
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
-# The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1_bXfoKEnzMao5p4QqgiV2hrKQ_s3moHKv3rLWpOGikc'
-SAMPLE_RANGE_NAME = 'Current L&F Items'
-
-def main():
+def extract(SPREADSHEET_ID, RANGE_NAME):
     """Shows basic usage of the Sheets API.
     Prints values from a sample spreadsheet.
     """
@@ -39,21 +35,28 @@ def main():
 
     # Call the Sheets API
     sheet = service.spreadsheets()
-    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-                                range=SAMPLE_RANGE_NAME).execute()
+    result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
+                                range=RANGE_NAME).execute()
     values = result.get('values', [])
 
     if not values:
         print('No data found.')
+        return None
     else:
         labels = values[0]
         cleanedData = []
         data = values[1:]
+        print(labels)
         for row in data:
             if len(row) > 0:
                 cleanedData.append(row)
         for row in cleanedData:
             print(row)
+        return cleanedData
 
 if __name__ == '__main__':
-    main()
+    # Lost and Found Website
+    data = extract('1_bXfoKEnzMao5p4QqgiV2hrKQ_s3moHKv3rLWpOGikc', 'Current L&F Items')
+    print(data)
+    # Gates
+    extract('1_bXfoKEnzMao5p4QqgiV2hrKQ_s3moHKv3rLWpOGikc', 'Gates')
