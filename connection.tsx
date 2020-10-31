@@ -1,4 +1,5 @@
-const {MongoClient} = require('mongodb');
+import { default as mongodb } from 'mongodb';
+let MongoClient = mongodb.MongoClient;
 
 async function listDatabases(client){
   let databasesList = await client.db().admin().listDatabases();
