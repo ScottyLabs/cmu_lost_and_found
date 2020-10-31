@@ -17,8 +17,7 @@ export default function Home() {
         <br></br>
         <Button><Link href="/available"><a>View Items</a></Link></Button>
         {/* Link to login portal later */}
-        <Button><Link href="/admin"><a>Admin Page</a></Link></Button>
-
+        <Button><Link href="/admin"><a>Admin Login</a></Link></Button>
       </main>
 
       <style jsx>{`
