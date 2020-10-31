@@ -1,13 +1,13 @@
 // Source: https://codeconqueror.com/blog/using-a-database-with-next-js
 
 import mongoose from "mongoose";
-import UserSchema from "./models/User";
+import ItemSchema from "./models/Item";
 import { connectToMongo } from "./lib/MongoUtils";
 
 export default async (req, res) => {
   const connection = await connectToMongo();
   try {
-    const User = connection.model("User", UserSchema);
+    const User = connection.model("Item", ItemSchema);
     const {
       query: { name },
       method,
