@@ -42,7 +42,7 @@ export default function Home() {
 
         h1 {
           color: #9C2624;
-          font-weight: 500;
+          font-weight: 600;
         }
 
         img {
