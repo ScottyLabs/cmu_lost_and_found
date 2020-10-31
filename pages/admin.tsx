@@ -11,7 +11,7 @@ export default function Example() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Admin Page</h1>
-      <Button><Link href="/"><a>Back to Home</a></Link></Button>
+      <Link href="/"><a><Button>Back to Home</Button></a></Link>
     </div>
   );
 }

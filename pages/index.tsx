@@ -15,9 +15,9 @@ export default function Home() {
         <h1 className="title">Welcome to the<br></br>CMU Lost and Found</h1>
         <img src="/dog-logo.png" alt="CMU Lost and Found Logo"></img>
         <br></br>
-        <Button><Link href="/available"><a>View Items</a></Link></Button>
-        {/* Link to login portal later */}
-        <Button><Link href="/admin"><a>Admin Login</a></Link></Button>
+        <Link href="/available"><a><Button>View Items</Button></a></Link>
+        <br></br>
+        <Link href="/admin"><a><Button>Admin Login</Button></a></Link>
       </main>
 
       <style jsx>{`
@@ -48,6 +48,10 @@ export default function Home() {
         img {
           max-width: 60%;
           height: auto;
+        }
+
+        a {
+          display: inline;
         }
 
       `}</style>

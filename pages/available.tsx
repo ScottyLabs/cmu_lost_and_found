@@ -12,7 +12,7 @@ export default function Example() {
       </Head>
       <main>
         <h1>Available Items</h1>
-        <Button><Link href="/"><a>Back to Home</a></Link></Button>
+        <Link href="/"><a><Button>Back to Home</Button></a></Link>
       </main>        
     </div>
   );
